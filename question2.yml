@@ -1,0 +1,8 @@
+---
+- hosts: servers
+  tasks:
+
+    - set_fact:
+        foo-bar: yolo
+    - debug:
+       var: "{{ foo-bar }}"

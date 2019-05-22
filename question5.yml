@@ -1,0 +1,10 @@
+---
+- hosts: servers
+  tasks:
+
+    - set_fact:
+        my_var: sneaky_peaky
+        sneaky_peaky: yolo
+
+    - debug:
+        var: "{{ my_var|default('Default_wins') }}"

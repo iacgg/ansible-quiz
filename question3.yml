@@ -1,0 +1,12 @@
+---
+- hosts: servers
+  tasks:
+
+    - copy:
+        dest: /tmp/my_file
+        content: ''
+        force: no
+
+    - file:
+        path:  /tmp/my_file_the_second
+        state: touch

@@ -1,0 +1,9 @@
+---
+- hosts: servers
+  tasks:
+
+    - set_fact:
+        my_var: local_vars_wins!
+
+    - debug:
+        var: my_var|default('Default_wins')
